@@ -21,28 +21,18 @@ function deepestChild() {
   return node
 }
 
-/*function increaseRankBy(n){
+function increaseRankBy(n){
   const rankedLists = document.querySelectorAll('.ranked-list')
 
-  for (let i = 0, l = children.length; i < l; i++) {
-    (parseInt(children[i].innerHTML +n))
-  }
+  for (let i = 0, l = rankedLists.length; i < l; i++) {
+    let children = rankedLists[i].children;
 
-
-  while (current) {
-    if (criteriaFn(current)) {
-      return current
+    for (let j =0; j < children.length; j++){
+      children[j].innerHTML = parseInt(children[j].innerHTML) + n
     }
-    if (Array.isArray(current)) {
-      for (let i = 0; i < current.length; i++) {
-        next.push(current[i])
-      }
-    }
-    current = next.shift()
   }
-  return null
 }
-*/
+/*
 function increaseRankBy(n) {
   const rankedLists = document.querySelectorAll('.ranked-list')
 
